@@ -1,0 +1,331 @@
+:root {
+  /* NAVBAR */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: var(--warnaAccent);
+    border-bottom: 3px solid rgb(243, 243, 243);
+    position-anchor: inherit;
+      
+  }
+
+  
+  .nav-bar {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .nav-item {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-item a {
+    text-decoration: none;
+    color: var(--warnaTeks);
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-item a:hover {
+    color: black;
+  }
+  --warnaBG: rgb(17, 70, 119);
+  --warnaDua: rgb(21, 85, 145);
+  --warnaTeks: rgb(255, 255, 255);
+  --warnaAccent: rgb(0, 179, 250);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--warnaBG);
+  color: var(--warnaTeks);
+  font-family: "Momo Trust Display", sans-serif
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: var(--warnaAccent);
+  border-bottom: 3px solid rgb(243, 243, 243);
+  position: fixed;       
+  top: 0;               
+  left: 0;
+  width: 100%;           
+  z-index: 999;         
+}
+body {
+  padding-top: 80px;    
+}
+/* Biar setiap section full layar */
+.awalan,
+.aboutme,
+.skills,
+.portfolio {
+  min-height: 100vh;       /* tinggi minimal 1 layar penuh */
+  display: flex;           
+  flex-direction: column;  
+  justify-content: center; 
+  align-items: center;     
+  padding: 4rem 7%;
+}
+
+
+/* HERO */
+.awalan {
+  flex-direction: row; /* hero pakai row agar teks & foto sejajar */
+  align-items: center;
+  justify-content: space-between;
+  padding: 8rem 5rem;
+}
+
+.text {
+  max-width: 60%;
+  font-size: 1.5rem;
+}
+
+.text h5 {
+  color: cyan;
+}
+
+.text h6 {
+  margin-top: 10px;
+  font-weight: normal;
+}
+
+.social a {
+  margin-right: 15px;
+  font-size: 2rem;
+  color: var(--warnaTeks);
+  transition: color 0.3s ease;
+}
+
+.social a:hover {
+  color: yellow;
+}
+
+img {
+  max-width: 35%;
+  border-radius: 50%;
+  border: 5px solid var(--warnaAccent);
+}
+
+/* ABOUT */
+.aboutme {
+  background-color: var(--warnaDua);
+}
+
+.aboutme h1 {
+  font-size: 3rem;
+  color: cyan;
+  margin-bottom: 1rem;
+}
+
+.aboutme p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* SKILLS */
+.skills {
+  background-color: var(--warnaBG);
+}
+
+.skills h1 {
+  font-size: 3rem;
+  color: cyan;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.skill-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.skill-card {
+  background-color: var(--warnaDua);
+  padding: 2rem 5rem 2rem 5rem;
+  border-radius: 14px;
+  text-align: center;
+  color: var(--warnaTeks);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: grid;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.35);
+}
+
+.skill-card i {
+  font-size: 56px;
+  margin-bottom: 1rem;
+}
+
+.skill-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.skill-card p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* PORTFOLIO */
+.portfolio {
+  background-color: var(--warnaDua);
+}
+
+.portfolio h1 {
+  font-size: 3rem;
+  color: cyan;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.portfolio-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.portfolio-card {
+  background-color: var(--warnaBG);
+  padding: 3rem;
+  border-radius: 10px;
+  width: 220px; /* diperbaiki dari 10px */
+  text-align: center;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-card:hover {
+  transform: scale(1.05);
+}
+
+.contact {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit;
+  color: white;
+  padding: 4rem 7%;
+}
+
+.contact h1 {
+  font-size: 3rem;
+  color: cyan;
+  margin-bottom: 2rem;
+}
+
+.form-box {
+  background: rgba(33, 135, 238, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.4);
+  width: 100%;
+  max-width: 500px;
+  backdrop-filter: blur(10px);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.input-group label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: cyan;
+}
+
+.input-group input,
+.input-group textarea {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  box-shadow: 0 0 10px cyan;
+}
+
+button {
+  background: cyan;
+  color: black;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: yellow;
+}
+/* FOOTER */
+footer {
+  min-height: auto;   
+  height: auto;
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--warnaAccent);
+  color: black;
+  font-weight: bold;
+}
+
+footer p {
+  margin-bottom: 1rem;
+}
+
+footer .social-footer a {
+  margin: 0 10px;
+  font-size: 1.8rem;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+footer .social-footer a:hover {
+  color: white;
+}
+html{
+  scroll-behavior: smooth;
+}
+/* Smartphone: */
+@media (max-width: 767px) {
+
+}
+/* tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+/* Laptop: */
+@media (min-width: 1025px) and (min-width: 1366px) {
+  
+}
